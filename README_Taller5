@@ -1,0 +1,15 @@
+Simulación de Pedidos en Java
+Descripción
+Este taller simula el procesamiento concurrente de pedidos en una tienda en línea. Dos clientes (productores) crean pedidos y dos operarios (consumidores) los procesan, usando BlockingQueue para la comunicación entre hilos y AtomicInteger para contar los pedidos procesados.
+
+Estructura
+Pedido.java: Representa un pedido con ID y nombre de cliente.
+
+Productor.java: Crea pedidos y los agrega a la cola.
+
+Consumidor.java: Procesa pedidos desde la cola.
+
+SimulacionPedidos.java: Lanza los hilos y coordina la ejecución.
+
+Justificación
+Se utilizan herramientas concurrentes de Java que evitan la sincronización manual (synchronized). BlockingQueue gestiona los pedidos entre hilos de forma segura, y AtomicInteger permite contar los procesados sin errores de concurrencia.
