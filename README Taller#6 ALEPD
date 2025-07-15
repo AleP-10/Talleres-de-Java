@@ -1,0 +1,30 @@
+Este proyecto implementa un sistema de notificaciones entre múltiples clientes y un servidor usando el protocolo UDP. Cada cliente envía mensajes automáticos al servidor sin mantener una conexión persistente. El servidor recibe los mensajes, los registra con hora de recepción e imprime los datos en consola o interfaz gráfica.
+
+Funcionalidad principal
+El servidor UDP escucha en el puerto 9876.
+
+Cada cliente envía 5 mensajes con su identificador (ej. Cliente01).
+
+Hay una pausa de 2 segundos entre cada mensaje enviado.
+
+Si el cliente se llama Cliente02, también envía el mensaje "FIN" para cerrar el servidor.
+
+Toda la comunicación es sin conexión, utilizando DatagramSocket y DatagramPacket de Java.
+
+Instrucciones de ejecución
+1. Ejecutar el servidor
+Ejecuta la clase UDPServer. Esto abrirá una ventana que comenzará a escuchar en el puerto 9876.
+
+2. Ejecutar los clientes
+Ejecuta la clase UDPClient. Ingresá un identificador único cuando se solicite (por ejemplo, "Cliente01" o "Cliente02").
+
+Se deben ejecutar al menos dos clientes para cumplir con el ejercicio.
+
+Herramientas utilizadas
+Lenguaje: Java
+
+IDE utilizado: IntelliJ IDEA
+
+GUI: Swing (JFrame, JTextArea)
+
+Redes: Paquete java.net (DatagramSocket, DatagramPacket)
